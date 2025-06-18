@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <Style>
+    
+    
+  body{
+  background-color: #0e0e0e;
+  color: White;
+  font-family: 'Montserrat', sans-serif;
+  }
+
+  /*''''''''''''''fixed sidebar''''''''''''''*/
+  .sidebar{
+  position: fixed;
+  width: 200px;
+  background-color: #0e0e0e;
+  padding: 30px 20px;
+  min-height: 100vh;
+}
+
+@media screen and (max-width: 768px){
+  .sidebar{
+    position: absolute;
+    width: 100%;
+    height: auto;
+    min-height: unset;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1000;
+  }
+}
+
+.profile{
+  width: 192px;
+  height: 192px;
+  border-radius: 12px;
+  display: block;
+  border: 2px solid #DACCFF;
+  transition: transform 0.3s ease-in-out;
+}
+
+.profile:hover{
+  transform: scale(1.1);
+}
+
+.available-button{
+  width: 192px;
+  height: 30px;
+  padding: 10px 15px;
+  margin-top: 15px;
+  margin-bottom: 48px;
+  font-size: 14px;
+  border-radius: 10px;
+  font-weight: 600;
+  background-color: #DACCFF;
+  border: 2px solid #DACCFF;
+  color: #6933FF;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.dot{
+  width: 5px;
+  height: 5px;
+  background-color: #6933FF;
+  border-radius: 50%;;
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav ul{
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+
+/*.nav li{
+  width: 192px;
+  height: 48px;
+  list-style: none;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-size: 14px;
+  background-color: #666666;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+  
+.nav ul li a{
+  color: white; 
+}*/
+
+.nav li {
+  background-color: #191919;
+  transition: background-color 0.3s ease;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  width: 192px;
+  box-sizing: border-box;
+}
+
+.nav li.active {
+  background-color: #666666;
+}
+
+.nav li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+.icon{
+  width: 20px;
+  height: 20px;
+  padding-left: 15px;
+  display: inline-block;
+  
+}
+
+.icon.location{
+  padding-left: 0;
+  padding-right: 0px;
+  color:#6933FF;
+}
+
+/*--------projects--------*/
+
+h2{
+  margin: 68px;
+  margin-bottom: 16px;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.projects-pics{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.project-pic{
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  flex: 1 1 calc(50% - 20%)
+  border-radius: 12px;
+}
+
+
+.project-pic img{
+  width: 100%;
+  height: auto;
+}
+
+.contact p{
+  color: #fff;
+}
+
+.project-pic p{
+  font-size: 14px;
+  color: #fff;
+}
+
+.view-projects-btn{
+  padding: 6px 12px;
+  height: 20px;
+  font-size: 14px;
+  color: #AEAEAE;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.view-projects-btn:hover{
+  color:#6933FF;
+}
+
+p{
+  color: #AEAEAE;
+}
+.main-content{
+  width: calc(100%-230px)%;
+  margin-left: 220px;
+  padding-top: 30px;
+  padding-left: 60px;
+  padding-right: 20px;
+  min-height: 100vh;
+}
+
+  </Style>
+</head>
+
+
+<body>
+  <div class="sidebar">
+  <img src="images/profie.jpg" alt="profile" class="profile">
+  <button class="available-button"><span class="dot"></span> Available for work</button>
+
+  <div class="nav">
+  <ul>
+    <li class="active"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+    <path d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+    <path d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+    </svg>
+    <a href="index.html#home">Home</a></li>
+
+    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+    <path fill-rule="evenodd" d="M3 6a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3V6Zm9.75 0a3 3 0 0 1 3-3H18a3 3 0 0 1 3 3v2.25a3 3 0 0 1-3 3h-2.25a3 3 0 0 1-3-3V6ZM3 15.75a3 3 0 0 1 3-3h2.25a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-2.25Zm9.75 0a3 3 0 0 1 3-3H18a3 3 0 0 1 3 3V18a3 3 0 0 1-3 3h-2.25a3 3 0 0 1-3-3v-2.25Z" clip-rule="evenodd" />
+    </svg>
+    <a href="index.html#Projects">Projects</a></li>
+
+    <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="icon">
+    <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+    <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+    </svg>
+    <a href="index.html#Contact">Contact</a></li>
+    </ul>
+    </div>
+    </div>
+    
+    <div class="main-content" id="home">
+    <div class="projects" id="Projects">
+    <h2>My Remarkable Projects</h2>
+
+    <div class="projects-pics">
+    <div class="project-pic">
+    <img src="images/Kam air thumbnail.png" alt="project-1">
+    <p><strong>Kamair Airline Website reDesign</strong></p>
+    </div>
+
+    <div class="project-pic">
+    <img src="images/kamair.png" alt="project-1">
+    <p><strong>Kamair Airline Website reDesign</strong></p>
+    </div>
+    <div class="projects-pics">
+    <div class="project-pic">
+    <img src="images/Kam air thumbnail.png" alt="project-1">
+    <p><strong>Kamair Airline Website reDesign</strong></p>
+    </div>
+
+    <div class="project-pic">
+    <img src="images/kamair.png" alt="project-1">
+    <p><strong>Kamair Airline Website reDesign</strong></p>
+    </div>
+    </div>
+</body>
+</html>
